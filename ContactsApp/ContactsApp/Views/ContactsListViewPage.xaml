@@ -12,13 +12,15 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height=".1*"/>
+            <RowDefinition Height=".1*"/>
             <RowDefinition Height="*"/>            
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>            
         </Grid.ColumnDefinitions>
         <Button Grid.Row="0" Grid.Column="0" Text="Add Contact" Command="{Binding AddContactCommand}" />
-        <CollectionView  Grid.Row="1" Grid.Column="0"
+        <Button Grid.Row="1" Grid.Column="0" Text="Contacts from phone" x:Name="PhoneContactsButton" Clicked="PhoneContactsButton_Clicked" CommandParameter="3" />
+        <CollectionView  Grid.Row="2" Grid.Column="0"
                          ItemsSource="{Binding Contacts}"
                          >
             <CollectionView.ItemTemplate>
