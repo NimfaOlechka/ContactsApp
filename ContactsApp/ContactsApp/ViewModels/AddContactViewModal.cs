@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ContactsApp.ViewModels
 {
-    class AddContactViewModal :INotifyPropertyChanged
+    class AddContactViewModal 
     {
         public Command SaveCommand { get; set; }
         public Command CancelCommand { get; set; }
@@ -24,8 +24,15 @@ namespace ContactsApp.ViewModels
                 PhoneNumber = "Phoone number",
                 Name = "Coontact Name"
             };
+
+            SaveCommand = new Command(async(Contact)=> 
+            {                              
+                // send it to list of the contacts
+                
+                await Application.Current.MainPage.Navigation.PopModalAsync();
+            });
            
         }
-        public event PropertyChangedEventHandler PropertyChanged;
+        
     }
 }

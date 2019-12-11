@@ -18,10 +18,10 @@
 
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
-            <Label Text="Phone Number" FontSize="Medium" />
+            <Label Text="Phone Number" FontSize="Medium" x:Name="contactPhone"/>
             <Entry Text="{Binding Contact.PhoneNumber}" FontSize="Small" />
             <Label Text="Name" FontSize="Medium" />
-            <Editor Text="{Binding Contact.Name}" FontSize="Small" Margin="0" />
+            <Editor Text="{Binding Contact.Name}" FontSize="Small" Margin="0" x:Name="contactName" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
