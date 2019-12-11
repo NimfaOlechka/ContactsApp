@@ -41,7 +41,7 @@ namespace ContactsApp.Views
             }
             else
             {
-                Debug.WriteLine($"Permission {permission} : {permissionStatus}");
+                Debug.WriteLine($"Permission {permission} {permissionStatus}");
             }
         }
     }
